@@ -1,0 +1,613 @@
+{
+    "__prototypes": {
+        "Sitegeist.GoldenGate.Neos.Plugin:Component.PriceTag": {
+            "__prototypeObjectName": "PackageFactory.AtomicFusion:Component",
+            "__meta": {
+                "styleguide": []
+            },
+            "value": "",
+            "currency": "",
+            "prefix": "",
+            "renderer": {
+                "__objectType": "Neos.Fusion:Tag",
+                "__value": null,
+                "__eelExpression": null,
+                "tagName": "div",
+                "attributes": {
+                    "class": "priceTag"
+                },
+                "content": {
+                    "__objectType": "Neos.Fusion:Array",
+                    "__value": null,
+                    "__eelExpression": null,
+                    "item_1": {
+                        "__objectType": "Neos.Fusion:Tag",
+                        "__value": null,
+                        "__eelExpression": null,
+                        "tagName": "span",
+                        "attributes": {
+                            "class": "priceTag__prefix"
+                        },
+                        "content": {
+                            "__eelExpression": "props.prefix",
+                            "__value": null,
+                            "__objectType": null
+                        }
+                    },
+                    "item_2": {
+                        "__eelExpression": "' '",
+                        "__value": null,
+                        "__objectType": null
+                    },
+                    "item_3": {
+                        "__objectType": "Neos.Fusion:Tag",
+                        "__value": null,
+                        "__eelExpression": null,
+                        "tagName": "span",
+                        "attributes": {
+                            "class": "priceTag__value"
+                        },
+                        "content": {
+                            "__eelExpression": "props.value",
+                            "__value": null,
+                            "__objectType": null
+                        }
+                    },
+                    "item_4": {
+                        "__eelExpression": "' '",
+                        "__value": null,
+                        "__objectType": null
+                    },
+                    "item_5": {
+                        "__objectType": "Neos.Fusion:Tag",
+                        "__value": null,
+                        "__eelExpression": null,
+                        "tagName": "span",
+                        "attributes": {
+                            "class": "priceTag__currency"
+                        },
+                        "content": {
+                            "__eelExpression": "props.currency",
+                            "__value": null,
+                            "__objectType": null
+                        }
+                    }
+                }
+            },
+            "__prototypeChain": [
+                "PackageFactory.AtomicFusion:Component"
+            ]
+        },
+        "Sitegeist.GoldenGate.Neos.Plugin:Component.Teaser": {
+            "__prototypeObjectName": "PackageFactory.AtomicFusion:Component",
+            "__meta": {
+                "styleguide": {
+                    "propSets": {
+                        "small": {
+                            "isLarge": false
+                        }
+                    }
+                },
+                "propTypes": {
+                    "title": {
+                        "__eelExpression": "PropTypes.string",
+                        "__value": null,
+                        "__objectType": null
+                    },
+                    "description": {
+                        "__eelExpression": "PropTypes.string",
+                        "__value": null,
+                        "__objectType": null
+                    },
+                    "imageUri": {
+                        "__eelExpression": "PropTypes.string",
+                        "__value": null,
+                        "__objectType": null
+                    },
+                    "priceValue": {
+                        "__eelExpression": "PropTypes.string",
+                        "__value": null,
+                        "__objectType": null
+                    },
+                    "priceCurrency": {
+                        "__eelExpression": "PropTypes.string",
+                        "__value": null,
+                        "__objectType": null
+                    },
+                    "uri": {
+                        "__eelExpression": "PropTypes.string",
+                        "__value": null,
+                        "__objectType": null
+                    },
+                    "isLarge": {
+                        "__eelExpression": "PropTypes.boolean",
+                        "__value": null,
+                        "__objectType": null
+                    }
+                }
+            },
+            "title": "",
+            "description": "",
+            "imageUri": null,
+            "priceValue": null,
+            "priceCurrency": "",
+            "uri": null,
+            "isLarge": false,
+            "renderer": {
+                "__objectType": "Neos.Fusion:Tag",
+                "__value": null,
+                "__eelExpression": null,
+                "tagName": "div",
+                "attributes": {
+                    "class": {
+                        "__eelExpression": "props.isLarge ? 'teaser teaser--large' : 'teaser'",
+                        "__value": null,
+                        "__objectType": null
+                    }
+                },
+                "content": {
+                    "__objectType": "Neos.Fusion:Array",
+                    "__value": null,
+                    "__eelExpression": null,
+                    "item_1": {
+                        "__objectType": "Neos.Fusion:Tag",
+                        "__value": null,
+                        "__eelExpression": null,
+                        "tagName": "img",
+                        "selfClosingTag": true,
+                        "attributes": {
+                            "class": "teaser__background",
+                            "src": {
+                                "__eelExpression": "props.imageUri",
+                                "__value": null,
+                                "__objectType": null
+                            },
+                            "alt": {
+                                "__eelExpression": "props.title",
+                                "__value": null,
+                                "__objectType": null
+                            }
+                        },
+                        "__meta": {
+                            "if": {
+                                "has": {
+                                    "__eelExpression": "props.imageUri",
+                                    "__value": null,
+                                    "__objectType": null
+                                }
+                            }
+                        }
+                    },
+                    "item_2": {
+                        "__objectType": "Sitegeist.GoldenGate.Neos.Plugin:Component.PriceTag",
+                        "__value": null,
+                        "__eelExpression": null,
+                        "__meta": {
+                            "if": {
+                                "has": {
+                                    "__eelExpression": "props.priceValue",
+                                    "__value": null,
+                                    "__objectType": null
+                                }
+                            }
+                        },
+                        "prefix": "ab",
+                        "value": {
+                            "__eelExpression": "props.priceValue",
+                            "__value": null,
+                            "__objectType": null
+                        },
+                        "currency": {
+                            "__eelExpression": "props.priceCurrency",
+                            "__value": null,
+                            "__objectType": null
+                        }
+                    },
+                    "item_3": {
+                        "__objectType": "Neos.Fusion:Tag",
+                        "__value": null,
+                        "__eelExpression": null,
+                        "tagName": "div",
+                        "attributes": {
+                            "class": "teaser__content"
+                        },
+                        "content": {
+                            "__objectType": "Neos.Fusion:Array",
+                            "__value": null,
+                            "__eelExpression": null,
+                            "item_1": {
+                                "__objectType": "Neos.Fusion:Tag",
+                                "__value": null,
+                                "__eelExpression": null,
+                                "tagName": "h4",
+                                "attributes": {
+                                    "class": "teaser__title"
+                                },
+                                "content": {
+                                    "__eelExpression": "props.title",
+                                    "__value": null,
+                                    "__objectType": null
+                                }
+                            },
+                            "item_2": {
+                                "__objectType": "Neos.Fusion:Tag",
+                                "__value": null,
+                                "__eelExpression": null,
+                                "tagName": "p",
+                                "attributes": {
+                                    "class": "teaser__description"
+                                },
+                                "content": {
+                                    "__eelExpression": "props.description",
+                                    "__value": null,
+                                    "__objectType": null
+                                }
+                            },
+                            "item_3": {
+                                "__objectType": "Neos.Fusion:Tag",
+                                "__value": null,
+                                "__eelExpression": null,
+                                "tagName": "a",
+                                "__meta": {
+                                    "if": {
+                                        "has": {
+                                            "__eelExpression": "props.uri",
+                                            "__value": null,
+                                            "__objectType": null
+                                        }
+                                    }
+                                },
+                                "attributes": {
+                                    "class": "teaser__callToAction",
+                                    "href": {
+                                        "__eelExpression": "props.uri",
+                                        "__value": null,
+                                        "__objectType": null
+                                    }
+                                },
+                                "content": "mehr &raquo;"
+                            }
+                        }
+                    }
+                }
+            },
+            "__prototypeChain": [
+                "PackageFactory.AtomicFusion:Component"
+            ]
+        },
+        "Sitegeist.GoldenGate.Neos.Plugin:Component.TeaserList": {
+            "__prototypeObjectName": "PackageFactory.AtomicFusion:Component",
+            "__meta": {
+                "styleguide": [],
+                "propTypes": {
+                    "items": {
+                        "__eelExpression": "PropTypes.arrayOf(PropTypes.shape( {title: PropTypes.string, description: PropTypes.string, imageUri: PropTypes.string, priceValue: PropTypes.string, priceCurrency: PropTypes.string, uri: PropTypes.string} ))",
+                        "__value": null,
+                        "__objectType": null
+                    }
+                }
+            },
+            "items": null,
+            "renderer": {
+                "__objectType": "Neos.Fusion:Tag",
+                "__value": null,
+                "__eelExpression": null,
+                "tagName": "div",
+                "attributes": {
+                    "class": "teaserList"
+                },
+                "content": {
+                    "__objectType": "Neos.Fusion:Collection",
+                    "__value": null,
+                    "__eelExpression": null,
+                    "collection": {
+                        "__eelExpression": "props.items",
+                        "__value": null,
+                        "__objectType": null
+                    },
+                    "itemName": "teaser",
+                    "itemRenderer": {
+                        "__objectType": "Neos.Fusion:Augmenter",
+                        "__value": null,
+                        "__eelExpression": null,
+                        "class": "teaserList__item",
+                        "content": {
+                            "__objectType": "Sitegeist.GoldenGate.Neos.Plugin:Component.Teaser",
+                            "__value": null,
+                            "__eelExpression": null,
+                            "title": {
+                                "__eelExpression": "teaser.title",
+                                "__value": null,
+                                "__objectType": null
+                            },
+                            "description": {
+                                "__eelExpression": "teaser.description",
+                                "__value": null,
+                                "__objectType": null
+                            },
+                            "imageUri": {
+                                "__eelExpression": "teaser.imageUri",
+                                "__value": null,
+                                "__objectType": null
+                            },
+                            "priceValue": {
+                                "__eelExpression": "teaser.priceValue",
+                                "__value": null,
+                                "__objectType": null
+                            },
+                            "priceCurrency": {
+                                "__eelExpression": "teaser.priceCurrency",
+                                "__value": null,
+                                "__objectType": null
+                            },
+                            "uri": {
+                                "__eelExpression": "teaser.uri",
+                                "__value": null,
+                                "__objectType": null
+                            },
+                            "isLarge": {
+                                "__eelExpression": "false",
+                                "__value": null,
+                                "__objectType": null
+                            }
+                        }
+                    }
+                }
+            },
+            "__prototypeChain": [
+                "PackageFactory.AtomicFusion:Component"
+            ]
+        },
+        "Sitegeist.GoldenGate.Neos.Plugin:Component.Detail": {
+            "__prototypeObjectName": "PackageFactory.AtomicFusion:Component",
+            "__meta": {
+                "styleguide": []
+            },
+            "title": "",
+            "description": "",
+            "imageUri": null,
+            "priceValue": null,
+            "priceCurrency": "",
+            "uri": null,
+            "renderer": {
+                "__objectType": "Neos.Fusion:Array",
+                "__value": null,
+                "__eelExpression": null,
+                "item_1": {
+                    "__objectType": "Neos.Fusion:Tag",
+                    "__value": null,
+                    "__eelExpression": null,
+                    "tagName": "h2",
+                    "content": {
+                        "__eelExpression": "props.title",
+                        "__value": null,
+                        "__objectType": null
+                    }
+                },
+                "item_2": {
+                    "__objectType": "Neos.Fusion:Tag",
+                    "__value": null,
+                    "__eelExpression": null,
+                    "tagName": "p",
+                    "content": {
+                        "__eelExpression": "props.description",
+                        "__value": null,
+                        "__objectType": null
+                    }
+                },
+                "item_3": {
+                    "__objectType": "Neos.Fusion:Tag",
+                    "__value": null,
+                    "__eelExpression": null,
+                    "tagName": "img",
+                    "selfClosingTag": true,
+                    "attributes": {
+                        "src": {
+                            "__eelExpression": "props.imageUri",
+                            "__value": null,
+                            "__objectType": null
+                        },
+                        "alt": {
+                            "__eelExpression": "props.title",
+                            "__value": null,
+                            "__objectType": null
+                        }
+                    },
+                    "__meta": {
+                        "if": {
+                            "has": {
+                                "__eelExpression": "props.imageUri",
+                                "__value": null,
+                                "__objectType": null
+                            }
+                        }
+                    }
+                },
+                "item_4": {
+                    "__objectType": "Neos.Fusion:Tag",
+                    "__value": null,
+                    "__eelExpression": null,
+                    "tagName": "p",
+                    "__meta": {
+                        "if": {
+                            "has": {
+                                "__eelExpression": "props.priceValue",
+                                "__value": null,
+                                "__objectType": null
+                            }
+                        }
+                    },
+                    "content": {
+                        "__objectType": "Neos.Fusion:Array",
+                        "__value": null,
+                        "__eelExpression": null,
+                        "item_1": "ab ",
+                        "item_2": {
+                            "__eelExpression": "props.priceValue",
+                            "__value": null,
+                            "__objectType": null
+                        },
+                        "item_3": " ",
+                        "item_4": {
+                            "__eelExpression": "props.priceCurrency",
+                            "__value": null,
+                            "__objectType": null
+                        }
+                    }
+                },
+                "item_5": {
+                    "__objectType": "Neos.Fusion:Tag",
+                    "__value": null,
+                    "__eelExpression": null,
+                    "tagName": "p",
+                    "__meta": {
+                        "if": {
+                            "has": {
+                                "__eelExpression": "props.uri",
+                                "__value": null,
+                                "__objectType": null
+                            }
+                        }
+                    },
+                    "content": {
+                        "__objectType": "Neos.Fusion:Tag",
+                        "__value": null,
+                        "__eelExpression": null,
+                        "tagName": "a",
+                        "attributes": {
+                            "href": {
+                                "__eelExpression": "props.uri",
+                                "__value": null,
+                                "__objectType": null
+                            }
+                        },
+                        "content": "mehr"
+                    }
+                }
+            },
+            "__prototypeChain": [
+                "PackageFactory.AtomicFusion:Component"
+            ]
+        },
+        "Neos.Fusion:Tag": {
+            "__meta": {
+                "class": "Neos\\Fusion\\FusionObjects\\TagImplementation"
+            },
+            "attributes": {
+                "__objectType": "Neos.Fusion:Attributes",
+                "__value": null,
+                "__eelExpression": null
+            },
+            "omitClosingTag": false,
+            "selfClosingTag": false
+        },
+        "Neos.Fusion:Array": {
+            "__meta": {
+                "class": "Neos\\Fusion\\FusionObjects\\ArrayImplementation"
+            }
+        },
+        "Neos.Fusion:Attributes": {
+            "__meta": {
+                "class": "Neos\\Fusion\\FusionObjects\\AttributesImplementation"
+            }
+        },
+        "Neos.Fusion:RawArray": {
+            "__meta": {
+                "class": "Neos\\Fusion\\FusionObjects\\RawArrayImplementation"
+            }
+        },
+        "Neos.Fusion:Collection": {
+            "__meta": {
+                "class": "Neos\\Fusion\\FusionObjects\\CollectionImplementation"
+            },
+            "itemName": "item",
+            "itemKey": "itemKey",
+            "iterationName": "iterator"
+        },
+        "Neos.Fusion:Augmenter": {
+            "__prototypeObjectName": "Neos.Fusion:Component",
+            "__meta": {
+                "class": "Neos\\Fusion\\FusionObjects\\AugmenterImplementation"
+            },
+            "fallbackTagName": "div",
+            "content": {
+                "__eelExpression": "value",
+                "__value": null,
+                "__objectType": null
+            },
+            "__prototypeChain": [
+                "Neos.Fusion:Component"
+            ]
+        },
+        "PackageFactory.AtomicFusion:Component": {
+            "__meta": {
+                "class": "PackageFactory\\AtomicFusion\\FusionObjects\\ComponentImplementation"
+            }
+        },
+        "Neos.Fusion:Component": {
+            "__meta": {
+                "class": "Neos\\Fusion\\FusionObjects\\ComponentImplementation"
+            }
+        }
+    },
+    "render_Sitegeist_GoldenGate_Neos_Plugin_Component_PriceTag": {
+        "__objectType": "Sitegeist.GoldenGate.Neos.Plugin:Component.PriceTag",
+        "__eelExpression": null,
+        "__value": null
+    },
+    "render_Sitegeist_GoldenGate_Neos_Plugin_Component_Teaser": {
+        "__objectType": "Sitegeist.GoldenGate.Neos.Plugin:Component.Teaser",
+        "__eelExpression": null,
+        "__value": null,
+        "title": {
+            "__objectType": null,
+            "__eelExpression": "title",
+            "__value": null
+        },
+        "description": {
+            "__objectType": null,
+            "__eelExpression": "description",
+            "__value": null
+        },
+        "imageUri": {
+            "__objectType": null,
+            "__eelExpression": "imageUri",
+            "__value": null
+        },
+        "priceValue": {
+            "__objectType": null,
+            "__eelExpression": "priceValue",
+            "__value": null
+        },
+        "priceCurrency": {
+            "__objectType": null,
+            "__eelExpression": "priceCurrency",
+            "__value": null
+        },
+        "uri": {
+            "__objectType": null,
+            "__eelExpression": "uri",
+            "__value": null
+        },
+        "isLarge": {
+            "__objectType": null,
+            "__eelExpression": "isLarge",
+            "__value": null
+        }
+    },
+    "render_Sitegeist_GoldenGate_Neos_Plugin_Component_TeaserList": {
+        "__objectType": "Sitegeist.GoldenGate.Neos.Plugin:Component.TeaserList",
+        "__eelExpression": null,
+        "__value": null,
+        "items": {
+            "__objectType": null,
+            "__eelExpression": "items",
+            "__value": null
+        }
+    },
+    "render_Sitegeist_GoldenGate_Neos_Plugin_Component_Detail": {
+        "__objectType": "Sitegeist.GoldenGate.Neos.Plugin:Component.Detail",
+        "__eelExpression": null,
+        "__value": null
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "sitegeist/shopware-component-example",
+  "type": "shopware-plugin",
+  "description": "Sitegeist Shopware Component Example",
+  "license": "GPL-3.0-or-later",
+  "extra": {
+    "installer-name": "SitegeistShopwareComponentExample"
+  },
+  "require": {
+    "composer/installers": "~1.0"
+  }
+}
